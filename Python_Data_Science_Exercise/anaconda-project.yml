@@ -1,0 +1,26 @@
+name: Room_Occupancy
+
+description: Occupancy example
+
+platforms:
+- linux-64
+- osx-64
+- win-64
+
+env_specs:
+  default:
+    packages:
+    - pandas
+    - numpy
+    - matplotlib=2.1.0
+    - hvplot=0.4
+    - notebook
+    - panel
+    channels: []
+
+commands:
+  dashboard:
+    unix: panel serve Panel_Webinar0919.ipynb
+    supports_http_options: true
+variables:
+  MPLBACKEND: Agg
